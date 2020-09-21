@@ -27,13 +27,16 @@ async function setup(){
             var strData = JSON.stringify(result);  
             ShowMessage("q1in",strData);
             //console.log(result);
-            // Assigning data to  
+            // Pasing data to resData variable 
             resData = result;
             //console.log(resData);
-            // Will only be transfer if there is an array with items. 
+            // Check if array contain at least
+            // One element .
             if(resData.length > 0 && flag){
-             //var strData =  JSON.stringify(data); 
-            ressArr =  max(resData); 
+            // 
+            // 
+            //Rot-13 algo function   
+            rot13(resData); 
             }    
         
           }

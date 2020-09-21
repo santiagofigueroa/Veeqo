@@ -8,18 +8,25 @@
 
 </head>
 <body >
-<h1>Question 1</h1>
-<p> 
-    The order list capital letters was added for display.
-</p> 
-<p> <h3> Input</h3>
-     <div id="q1in" ></div>
-    </p>
-<p> <h3>Output</h3>
-    <div id="q1out" ></div>
-   <div id= "stringContainer"> </div>
+    <form id="StringsForm">
+        <label  for="num" > Shift  </label> <br> 
+        <input id ="num" type="number" name="num"> <br>
+        <label  for="string1" > 1st String </label> <br> 
+        <input id ="string1" type="text" name="s1"> <br> 
+    <button class="btn btn-primary" onclick="stringsToAlgo()" type="submit">Submit</button>
+</form>
+
+<h3>
+Input: 
+</h3>
+<p>
+    <div id = "input"> </div>
 </p>
 
+<h3> Output:</h3>
+<p> 
+    <div id="output"></div>
+</p>
 <p> <a href="Index.html" >Question 1 </a></p>
     <script type="text/javascript"  src="Data/data.json"></script>
     <script type="text/javascript"  src="Scripts/Scripts.js"></script>
