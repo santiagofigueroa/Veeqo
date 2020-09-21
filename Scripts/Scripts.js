@@ -1,12 +1,11 @@
 // Data to be returned.
 var resData = Array(50);
-
+// Set
 async function setup(){
     var data = [];
     var result = [];
     var flag = false;
-  //document.onreadystatechange = function(){
-  //if(document.readyState === "complete"){
+ 
     console.log(document.readyState);  
       var xhp  = new XMLHttpRequest();
       xhp.responseText = "text";
@@ -24,8 +23,8 @@ async function setup(){
             data.forEach(function(element) {
                 result.push(element);
             });
-  
-            var strData = PrintInput(result);  
+            console.log(result);
+            var strData = JSON.stringify(result);  
             ShowMessage("q1in",strData);
             //console.log(result);
             // Assigning data to  
@@ -42,10 +41,5 @@ async function setup(){
       };
       xhp.open('GET','Data/data.json',true);
       xhp.send();
-        
-      // }//  End of function.
-       
-     // }
-  
       return  resData; 
   }
