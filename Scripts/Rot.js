@@ -9,7 +9,7 @@ rot13(str){
     for(var s in str){
         this.numSytrings ++;
         //console.log(s1.charAt(s));
-        var tmp = str.charAt(s);
+        var tmp = str.charAt(s.input);
         // Checks when ever is a lower and that is not empty.
         if(tmp == tmp.toLowerCase() && tmp != " "){
           //  console.log(tmp);

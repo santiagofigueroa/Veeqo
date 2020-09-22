@@ -36,7 +36,7 @@ async function setup(){
             // 
             // 
             //Rot-13 algo function   
-            rot13(resData); 
+            rot13(resData.input); 
             }    
         
           }
