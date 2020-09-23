@@ -1,5 +1,46 @@
 class Rot { 
-    //resultArray = new Array();  
+
+  rot(iArr){
+    
+    var resultArray = [];
+    // works now counting chars
+    for(var s of iArr){
+        //console.log(s1.charAt(s));
+        var tmpI = s.input;
+        var tmpO = s.expec; 
+        var tmpS = s.skip ;
+        
+        console.log(tmp);
+        
+      
+        // Checks when ever is a lower and that is not empty.
+      for(var i in tmp ){  
+          // 
+          var char = "";
+          console.log(tmp[i]);
+            if(tmpI[i] == tmp[i].toLowerCase() && tmpI[i] != " "){
+              char =  spacesCount( tmpI[i],false);
+               resultArray.push(char);
+            } else if (tmpI[i] == tmpI[i].toUpperCase() && tmpI[i] != " "){
+               char = spacesCount(tmpI[i],true);
+               resultArray.push(char);
+            }else {
+              console.log(tmpI[i]); 
+              resultArray.push(tmpI[i].toString());
+            }
+
+  
+       } 
+    
+    }
+
+    console.log(resultArray);
+    return resultArray; 
+}
+
+
+
+ 
     
 rot13(iArr){
     
@@ -9,30 +50,25 @@ rot13(iArr){
         //console.log(s1.charAt(s));
         var tmp = s.input;
         console.log(tmp);
-        var  lower = 0;
-        var upper = false; 
+        
+      
         // Checks when ever is a lower and that is not empty.
       for(var i in tmp ){  
+          // 
+          var char = "";
           console.log(tmp[i]);
             if(tmp[i] == tmp[i].toLowerCase() && tmp[i] != " "){
-              lower = tmp[i].charCodeAt(0) - 'a'.charCodeAt(0);
+              char =  spacesCount( tmp[i],false);
+               resultArray.push(char);
             } else if (tmp[i] == tmp[i].toUpperCase() && tmp[i] != " "){
-               upper = true;
-               lower = tmp[i].charCodeAt(0) - 'A'.charCodeAt(0);
+               char = spacesCount(tmp[i],true);
+               resultArray.push(char);
             }else {
               console.log(tmp[i]); 
-              resultArray.push(tmp[i]);
+              resultArray.push(tmp[i].toString());
             }
 
-          console.log(lower);
-            if (lower >  0  && lower < 26 ){
-                 console.log(lower);
-                 var char = codeToChar((lower + 13) % 26); 
-                 //
-                 console.log(char); 
-                 if (upper) char = char.toUpperCase();
-                 resultArray.push(char);
-               }    
+  
        } 
     
     }
@@ -41,5 +77,6 @@ rot13(iArr){
     return resultArray; 
 }
 
+ 
 
 }

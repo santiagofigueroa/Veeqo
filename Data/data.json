@@ -1,18 +1,18 @@
 [
     {
-        "rot":13,
+        "skip":13,
         "input" : "Hello World",
         "expec" : "Uryyb Jbeyq"
     },
     {
-        "rot":13,
+        "skip":13,
         "input" : "The Number 16.",
         "expec" : "Gur Ahzore 16."
     },
     {
-        "rot":16,
+        "skip":16,
         "input":"Hello World",
         "expec": "Axeeh Phkew!"
     }
     
-    ]
+]

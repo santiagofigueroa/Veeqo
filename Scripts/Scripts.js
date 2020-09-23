@@ -16,7 +16,7 @@ async function setup(){
             console.log("Success");
            if(xhp.responseText){  
             data = JSON.parse(xhp.responseText);
-            // 
+            // Gets the datge from the JSON  file 
             console.log(data); 
             data.forEach(function(element) {
                 result.push(element);
@@ -34,7 +34,8 @@ async function setup(){
             
           }
         }
-      };
+      }
+      // End of XHP 
       xhp.open('GET','Data/data.json',true);
       xhp.send();
 
