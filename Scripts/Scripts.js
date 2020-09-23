@@ -4,7 +4,6 @@ var resData = Array(50);
 async function setup(){
     var data = [];
     var result = [];
-    var flag = false;
  
     console.log(document.readyState);  
       var xhp  = new XMLHttpRequest();
@@ -12,7 +11,6 @@ async function setup(){
       
       // Makes sure connection has being stablish
     xhp.onreadystatechange = await function (){
-      flag = true;
         if (xhp.readyState === 4 && xhp.status === 200){
           
             console.log("Success");
@@ -26,23 +24,21 @@ async function setup(){
             console.log(result);
             var strData = JSON.stringify(result);  
             ShowMessage("q1in",strData);
-            //console.log(result);
-            // Pasing data to resData variable 
-            resData = result;
-            //console.log(resData);
-            // Check if array contain at least
-            // One element .
-            if(resData.length > 0 && flag){
-            // 
-            // 
-            //Rot-13 algo function   
-            rot13(resData.input); 
-            }    
-        
+            console.log(result);
+
+            if(result.length > 0){
+              //Rot-13 algo function   
+              var rot =  new Rot();
+              rot.rot13(result); 
+              } 
+            
           }
         }
       };
       xhp.open('GET','Data/data.json',true);
       xhp.send();
-      return  resData; 
+
+   
+     
+      return  result; 
   }
