@@ -29,17 +29,17 @@ async function setup(){
             if(result.length > 0){
               //Rot-13 algo function   
               var rot =  new Rot();
-              rot.rot13(result); 
+             resData = rot.rot13(result); 
               } 
             
           }
         }
-      }
+      };
       // End of XHP 
       xhp.open('GET','Data/data.json',true);
       xhp.send();
 
    
      
-      return  result; 
+      return  resData; 
   }

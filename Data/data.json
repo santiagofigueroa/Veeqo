@@ -1,6 +1,11 @@
 [
     {
         "skip":13,
+        "input" : "12345 67890",
+        "expec" : "12345 67890"
+    },
+    {
+        "skip":13,
         "input" : "Hello World",
         "expec" : "Uryyb Jbeyq"
     },
@@ -13,6 +18,11 @@
         "skip":16,
         "input":"Hello World",
         "expec": "Axeeh Phkew!"
+    },
+    {
+        "skip":13,
+        "input" : "Santiago Figueroa 91.",
+        "expec" : ""
     }
     
 ]

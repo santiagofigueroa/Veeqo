@@ -9,13 +9,15 @@ function ShowMessage(id, message) {
 }
 
 
-function spacesCount (tmp,upper){
+function spacesCount (tmp,upper,skip){
     var  spac = 0;
     var a = "a";
     var retChar = "";
+    // Implementing new feature for ROT algorithm 
+    if (skip === null) skip = 13; 
   
     if (upper) a = "A";
-    spac = ((tmp.charCodeAt(0) - a.charCodeAt(0) + 13) % 26);
+    spac = ((tmp.charCodeAt(0) - a.charCodeAt(0) + skip) % 26);
   
     var retChar = codeToChar(spac);
   
@@ -34,5 +36,21 @@ function spacesCount (tmp,upper){
     var char =   alphabet[indexC];
     return char;
   }
+
+var resultArray = new Array(50);
+
+function addToArr(str){
+    ///
+    if(str != null){ 
+       this.resultArray.push(str);
+     } 
+}
+
+
+function getResultArr(){
+  
+  return this.resultArray;
+
+}
 
 
