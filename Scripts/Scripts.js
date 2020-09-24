@@ -1,5 +1,5 @@
 // Data to be returned.
-var resData = Array(50);
+var resData = Array();
 // Set
 async function setup(){
     var data = [];
@@ -8,7 +8,6 @@ async function setup(){
     console.log(document.readyState);  
       var xhp  = new XMLHttpRequest();
       xhp.responseText = "text";
-      
       // Makes sure connection has being stablish
     xhp.onreadystatechange = await function (){
         if (xhp.readyState === 4 && xhp.status === 200){
@@ -29,17 +28,18 @@ async function setup(){
             if(result.length > 0){
               //Rot-13 algo function   
               var rot =  new Rot();
-             resData = rot.rot13(result); 
-              } 
+             resData = rot.rot13(result);
+             ShowMessage("q1out",resData);   
+             return resData;
+             
+            } 
             
           }
         }
-      };
+      }
       // End of XHP 
       xhp.open('GET','Data/data.json',true);
       xhp.send();
 
-   
-     
-      return  resData; 
+
   }

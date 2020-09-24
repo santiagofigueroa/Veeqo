@@ -1,28 +1,24 @@
 [
     {
         "skip":13,
-        "input" : "12345 67890",
-        "expec" : "12345 67890"
+        "input" : "12345 67890"
     },
     {
         "skip":13,
-        "input" : "Hello World",
-        "expec" : "Uryyb Jbeyq"
+        "input" : "Hello World"
     },
     {
         "skip":13,
-        "input" : "The Number 16.",
-        "expec" : "Gur Ahzore 16."
+        "input" : "The Number 16."
+    
     },
     {
         "skip":16,
-        "input":"Hello World",
-        "expec": "Axeeh Phkew!"
+        "input":"Hello World"
     },
     {
         "skip":13,
-        "input" : "Santiago Figueroa 91.",
-        "expec" : ""
+        "input" : "Santiago Figueroa 91."
     }
     
 ]

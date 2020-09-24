@@ -1,26 +1,27 @@
  class Rot { 
 
   
-  rot(tmpI,tmpS){
+  rotAlgo(tmpI,tmpS){
     
     var resultStr  = ""; 
     // Regex E 
     var lower = /[a-z]/g;
     var upper = /[A-Z]/g;
     // works now counting chars
-      for(var i in tmpI ){  
+    console.log(typeof tmpI);
+      for(var i in tmpS ){  
           // 
           var char = "";
-          console.log(tmpI[i]);
-            if(tmpI[i].match(lower)){
-              char =  spacesCount( tmpI[i],false,tmpS);
+          console.log(tmpS[i]);
+            if(tmpS[i].match(lower)){
+              char =  spacesCount( tmpS[i],false,tmpI);
               resultStr += char;
-            } else if (tmpI[i].match(upper)){
-               char = spacesCount(tmpI[i],true,tmpS);
+            } else if (tmpS[i].match(upper)){
+               char = spacesCount(tmpS[i],true,tmpI);
                resultStr += char;
             }else {
-              console.log(tmpI[i]); 
-              resultStr += tmpI[i].toString();
+              console.log(tmpS[i]); 
+              resultStr += tmpS[i].toString();
             }
             //resultStr += "|";
        } 
@@ -31,7 +32,7 @@
 //  Function implementing the ROT-13 algorithm   
 rot13(iArr){
     // 
-    var resultArray = new Array(50);
+    var resultArray = new Array();
     //Regex used to check Upper and lower case  letters
     var lower = /[a-z]/g;
     var upper = /[A-Z]/g;
@@ -40,6 +41,7 @@ rot13(iArr){
     for(var s in iArr){
         //console.log(s1.charAt(s));
         var tmp = iArr[s].input;
+        var num = iArr[s].skip;
         console.log(tmp);
         resultString = "";
         // Checks when ever is a lower and that is not empty.
@@ -50,11 +52,11 @@ rot13(iArr){
           //console.log(tmp[i]);
             if(tmp[i].match(lower)){
               // Rot- 13 Hard coded to method.
-              char =  spacesCount(tmp[i],false,13);
+              char =  spacesCount(tmp[i],false,num);
              //  resultArray.push(char);
              resultString += char;
             } else if (tmp[i].match(upper)){
-               char = spacesCount(tmp[i],true,13);
+               char = spacesCount(tmp[i],true,num);
                //resultArray.push(char);
                resultString += char;
             } else {

@@ -17,6 +17,7 @@ function spacesCount (tmp,upper,skip){
     if (skip === null) skip = 13; 
   
     if (upper) a = "A";
+    // Spaces that will need to skip for and If passes then will be a reminder of 26 as the alphabets.  
     spac = ((tmp.charCodeAt(0) - a.charCodeAt(0) + skip) % 26);
   
     var retChar = codeToChar(spac);
@@ -37,20 +38,6 @@ function spacesCount (tmp,upper,skip){
     return char;
   }
 
-var resultArray = new Array(50);
 
-function addToArr(str){
-    ///
-    if(str != null){ 
-       this.resultArray.push(str);
-     } 
-}
-
-
-function getResultArr(){
-  
-  return this.resultArray;
-
-}
 
 

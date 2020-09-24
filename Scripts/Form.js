@@ -12,7 +12,7 @@ function stringsToAlgo(){
         ShowMessage("input"," Number :"+ num + "<br> String " +s1); 
         console.log(num +" "+ s1);
         var rot =  new Rot();
-        result = rot.Rot(num,s1);
+        result = rot.rotAlgo(num,s1);
         // Result for output if any  
         ShowMessage( "output",result);   
     } else { 
