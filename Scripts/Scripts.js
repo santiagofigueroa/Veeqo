@@ -21,15 +21,16 @@ async function setup(){
                 result.push(element);
             });
             console.log(result);
-            var strData = JSON.stringify(result);  
+            var strData = PrintIn(data); 
             ShowMessage("q1in",strData);
             console.log(result);
 
             if(result.length > 0){
               //Rot-13 algo function   
-              var rot =  new Rot();
+             var rot =  new Rot();
              resData = rot.rot13(result);
-             ShowMessage("q1out",resData);   
+             var tmpResDataStr = PrintOut(resData);
+             ShowMessage("q1out",tmpResDataStr);   
              return resData;
              
             } 

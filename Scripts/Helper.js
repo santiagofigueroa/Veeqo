@@ -37,6 +37,37 @@ function spacesCount (tmp,upper,skip){
     var char =   alphabet[indexC];
     return char;
   }
+  function PrintIn(data){ 
+    var tempData = "<p> <ol type ='A'>";
+     for (s in data) {
+        tempData +=  "<li> Rotation: "; 
+        tempData +=  JSON.stringify(data[s].skip);
+        tempData += "<br>" 
+        tempData +=  " String Input: "; 
+        tempData +=  JSON.stringify(data[s].input);    
+        tempData +=  "</li> <br>"; 
+     }
+
+     tempData += " </p> <ol>";
+     console.log(tempData);  
+     return tempData;        
+
+ }
+
+
+ function PrintOut(data){ 
+  var tempData = "<p> <ol type ='A'>";
+   for (s in data) {
+      tempData +=  "<li> "; 
+      tempData +=  " String Output: "; 
+      tempData +=  JSON.stringify(data[s]);    
+      tempData +=  "</li> <br>"; 
+   }
+   tempData += " </p> <ol>";
+   console.log(tempData);  
+   return tempData;        
+
+}
 
 
 
